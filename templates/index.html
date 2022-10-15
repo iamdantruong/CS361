@@ -1,0 +1,90 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Find your next destination {% endblock %}</h1>
+    <form method ="POST">
+        <input type = "text" name = "country" placeholder = "Have a country in mind? Search here..."> <input type ="submit" value="Search" style="width:100px;">
+    </form>
+    <p></p>
+    <h3>or search from the regions below!</h3>
+    <div class="row">
+        <div class ="column">
+            <div class="dropdown">
+            <button onclick="myFunction(1)" class="dropbtn">Africa</button>
+            <div id="myDropdown1" class="dropdown-content">
+            <a href="./country/Algeria">Algeria</a>
+            <a href="./country/Benin">Benin</a>
+            <a href="./country/Egypt">Egypt</a>
+            <a href="./country/Libya">Libya</a>
+            <a href="./country/Morrocco">Morrocco</a>
+            </div>
+            </div>
+        </div>
+        <div class ="column">
+            <div class="dropdown">
+            <button onclick="myFunction(2)" class="dropbtn">Asia</button>
+            <div id="myDropdown2" class="dropdown-content">
+            <a href="./country/China">China</a>
+            <a href="./country/Japan">Japan</a>
+            <a href="./country/South_Korea">South Korea</a>
+            <a href="./country/Taiwan">Taiwan</a>
+            <a href="./country/Vietnam">Vietnam</a>
+            </div>
+            </div>
+        </div>
+        <div class ="column">
+            <div class="dropdown">
+            <button onclick="myFunction(3)" class="dropbtn">Europe</button>
+            <div id="myDropdown3" class="dropdown-content">
+            <a href="./country/England">England</a>
+            <a href="./country/Greece">Greece</a>
+            <a href="./country/Italy">Italy</a>
+            <a href="./country/France">France</a>
+            <a href="./country/Portugal">Portugal</a>
+            <a href="./country/Spain">Spain</a>
+            </div>
+            </div>
+        </div>
+        <div class ="column">
+            <div class="dropdown">
+            <button onclick="myFunction(4)" class="dropbtn">North America</button>
+            <div id="myDropdown4" class="dropdown-content">
+            <a href="./country/Canada">Canada</a>
+            <a href="./country/Mexico">Mexico</a>
+            <a href="./country/Guatemala">Guatamela</a>
+            <a href="./country/Cuba">Cuba</a>
+            </div>
+            </div>
+        </div>
+        <div class ="column">
+            <div class="dropdown">
+            <button onclick="myFunction(5)" class="dropbtn">South America</button>
+            <div id="myDropdown5" class="dropdown-content">
+            <a href="./country/Brazil">Brazil</a>
+            <a href="./country/Colombia">Colombia</a>
+            <a href="./country/Argentina">Argentina</a>
+            <a href="./country/Chile">Chile</a>
+            </div>
+            </div>
+        </div>
+        <div class ="column">
+            <div class="dropdown">
+            <button onclick="myFunction(6)" class="dropbtn">Oceania</button>
+            <div id="myDropdown6" class="dropdown-content">
+            <a href="./country/Australia">Australia</a>
+            <a href="./country/Papua_New_Guinea">Papua New Guinea</a>
+            <a href="./country/New_Zealand">New Zealand</a>
+            <a href="./country/Fiji">Fiji</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <figure>
+        <img src = "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2050&q=80">
+        <figcaption> Image by Brett Zeck via <a href= https://unsplash.com/photos/eyfMgGvo9PA> Unsplash </a> </figcaption>
+    </figure>
+</html>
+{% endblock %}
+

@@ -1,0 +1,90 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% if countryName%}
+<h2 style="font-style:italic">{{countryName}} </h2>
+<br>
+<div class="row">
+    <div class="column" style= "border:cadetblue; border-width:3px; border-style:solid; border-right:0px; border-radius: 8px; width:40%;">
+        <h5>Welcome to {{countryName}}</h5>
+        <p>Insert country description...</p>
+    </div>
+    <div class="column" style= "border:cadetblue; border-width:3px; border-style:solid; border-radius: 8px; width:40%;">
+        <h5>Current Travel Advisory for {{countryName}}</h5>
+        <p>
+            <table>
+                <th>October 5, 2022 | </th>
+                <th style="background-color: orange">Level 3: Reconsider Travel</th>
+            </table>
+
+        </p>
+        <p>For more info, please see the official advisory on the <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/papua-new-guinea-travel-advisory.html " onclick="return confirm_alert(this);" class="btn-sm"> TSA website</a> </p>
+    </div>
+</div>
+<br>
+<div class="weather" style= "border:cadetblue; border-width:3px; border-style:solid; width:70%; border-radius: 8px;">
+    <h5>Historical Weather Information</h5>
+    <p></p>
+    <div class ="column">
+    <label>See previous year's weather by selecting a date and city. </label>
+    <br>
+    <input type="date" id="today" name="trip-start"
+        min="2022-01-01" max="2023-12-31" style="width:150px">
+    </div>
+    <br>
+    <select class="search_select" name="city" style="width:120px;">
+        <option value="City1xxxxx">City1</option>
+        <option value="#">City2</option>
+        <option value="#">City3</option>
+        <option value="#">City4</option>
+      </select>
+      <button>Check</button>
+</div>
+<br>
+
+<div class="currency" style= "border:cadetblue; border-width:3px; border-style:solid; width:70%; border-radius: 8px;">
+    <h5>Currency Converter</h5>
+    <p></p>
+    <label>See the current currency exchange rate by entering an amount and a currency to convert from.</label>
+    <div class = "row">
+        <p style="margin-left: 20px;">From:
+            <input type ="number" placeholder="Quantity (e.g. 1,2,3)" style="width: 140px;">
+        <select class="search_select" name="currency">
+            <option value="USD">United States Dollars USD </option>
+            <option value="CNY">Chinese Yuan CNY</option>
+            <option value="JPY">Japanese Yen JPY</option>
+            <option value="KRW">South Korean Won KRW</option>
+          </select>
+        </p>
+    </div>
+    <div class = "row">
+        <p style="margin-left: 20px;">To: 
+        <select class="search_select" name="currency">
+            <option value="CNY">Chinese Yuan CNY</option>
+            <option value="JPY">Japanese Yen JPY</option>
+            <option value="USD">United States Dollars USD </option>
+            <option value="KRW">South Korean Won KRW</option>
+          </select>
+        <button>Convert</button>
+        </p>
+    </div>
+</div>
+<br>
+
+<div class="cities" style= "border:cadetblue; border-width:3px; border-style:solid; width:70%; border-radius: 8px;">
+    <ul><h5>Cities in {{countryName}}</h5>
+    <li>City1 - brief description</li>
+    <li>City2 - brief description</li>
+    <li>City3 - brief description</li>
+    <li>City4 - brief description</li>
+    <li>City5 - brief description</li>
+    <li>City6 - brief description</li>
+    </ul>
+
+
+</div>
+{% endif %}
+</html>
+{% endblock %}
