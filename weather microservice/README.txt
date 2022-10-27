@@ -33,3 +33,6 @@ the weather response looks like.
      'name': 'Federal Way', 
      'cod': 200
      }
+
+![sequence](./sequence.jpeg)
+
