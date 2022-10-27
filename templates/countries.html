@@ -9,7 +9,9 @@
 <div class="row">
     <div class="column" style= "border:cadetblue; border-width:3px; border-style:solid; border-right:0px; border-radius: 8px; width:40%;">
         <h5>Welcome to {{countryName}}</h5>
-        <p>Insert country description...</p>
+{% if summary%}
+        <p>{{summary}}</p>
+{% endif %}
     </div>
     <div class="column" style= "border:cadetblue; border-width:3px; border-style:solid; border-radius: 8px; width:40%;">
         <h5>Current Travel Advisory for {{countryName}}</h5>
@@ -34,13 +36,16 @@
         min="2022-01-01" max="2023-12-31" style="width:150px">
     </div>
     <br>
-    <select class="search_select" name="city" style="width:120px;">
-        <option value="City1xxxxx">City1</option>
-        <option value="#">City2</option>
-        <option value="#">City3</option>
-        <option value="#">City4</option>
-      </select>
-      <button>Check</button>
+    <form method ="POST">
+        <select class="search_select" name="city" style="width:120px;">
+{% if cities %}
+    {% for city in cities %}
+            <option value="{{city}}">{{city}}</option>
+    {% endfor %}
+        </select>
+      <input type ="submit" value="Check" style="width:100px;">
+    </form>
+{% endif %}
 </div>
 <br>
 
@@ -75,14 +80,12 @@
 
 <div class="cities" style= "border:cadetblue; border-width:3px; border-style:solid; width:70%; border-radius: 8px;">
     <ul><h5>Cities in {{countryName}}</h5>
-    <li>City1 - brief description</li>
-    <li>City2 - brief description</li>
-    <li>City3 - brief description</li>
-    <li>City4 - brief description</li>
-    <li>City5 - brief description</li>
-    <li>City6 - brief description</li>
+{% if cities %}
+    {% for city in cities %}
+    <li>{{city}}</li>
+    {% endfor %}
     </ul>
-
+{% endif %}
 
 </div>
 {% endif %}
