@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block weather %}
+{% if temperature %}
+<div class="weather2" style= "border:cadetblue; border-width:3px; border-style:solid; width:100%; border-radius: 8px;">
+    <p>The average temperature in {{temperature['city']}}, {{temperature['country']}} Fahrenheit was {{temperature['tavg']}} on {{temperature['date']}}</p>
+</div>
+{% endif %}
+{% endblock %}
